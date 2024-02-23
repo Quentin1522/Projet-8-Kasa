@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+/*RESET*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapperBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapperBanner .bgOpacity {
+  background-color: #000;
+  position: absolute;
+  top: 132px;
+  width: 80%;
+  height: 223px;
+  opacity: 0.5;
+  border-radius: 25px;
+}
+.wrapperBanner .imgBanner {
+  width: 80%;
+  height: 223px;
+  border-radius: 25px;
+  border: 1px solid black;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapperBanner .titleBanner {
+  position: relative;
+  bottom: 125px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 48px;
+}
+.wrapperBanner .titleBannerMobile {
+  display: none;
+}
+
+/*tablette*/
+@media (max-width: 1200px) {
+  .wrapperBanner .titleBanner {
+    font-size: 36px;
+    width: 80%;
+  }
+}
+/*mobile*/
+@media (max-width: 768px) {
+  .wrapperBanner .titleBanner {
+    font-size: 24px;
+  }
+  .wrapperBanner .imgBanner, .wrapperBanner .bgOpacity {
+    height: 178px;
+  }
+  .wrapperBanner .bgOpacity {
+    position: absolute;
+    top: 95px;
+  }
+  .wrapperBanner .titleBanner {
+    display: none;
+  }
+  .wrapperBanner .titleBannerMobile {
+    display: inline;
+    color: #fff;
+    position: absolute;
+    left: 60px;
+  }
+}/*# sourceMappingURL=banner.css.map */

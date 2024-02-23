@@ -1,0 +1,163 @@
+/*RESET*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapperProductPage {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.wrapperProductPage .host {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapperProductPage .host .titleProduct {
+  color: #FF6060;
+  font-size: 36px;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+.wrapperProductPage .host .hostProfil {
+  display: flex;
+  align-items: center;
+}
+.wrapperProductPage .host .hostProfil .hostName {
+  width: 80px;
+  text-align: right;
+  color: #FF6060;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+}
+.wrapperProductPage .host .hostProfil .hostPicture {
+  width: 70px;
+  margin: 0 0 15px 10px;
+  border-radius: 50%;
+}
+.wrapperProductPage .tagsStarContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapperProductPage .tagsStarContainer .tagsContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapperProductPage .tagsStarContainer .tagsContainer .tagsProduct {
+  border-radius: 10px;
+  background-color: #FF6060;
+  color: #fff;
+  padding: 3px 30px;
+}
+.wrapperProductPage .tagsStarContainer .starContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapperProductPage .tagsStarContainer .star {
+  width: 25px;
+  margin-left: 10px;
+  color: #FF6060;
+}
+.wrapperProductPage .tagsStarContainer .starGray {
+  width: 25px;
+  margin-left: 10px;
+  color: #ccc;
+}
+.wrapperProductPage .hostProfilMobile {
+  display: none;
+}
+.wrapperProductPage .descripEquipeContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapperProductPage .descripEquipeContainer .description, .wrapperProductPage .descripEquipeContainer .equipement {
+  width: 45%;
+  margin-bottom: 5%;
+}
+.wrapperProductPage .descripEquipeContainer .descripTitle, .wrapperProductPage .descripEquipeContainer .equipeTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FF6060;
+  display: flex;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.wrapperProductPage .descripEquipeContainer .descripProduct, .wrapperProductPage .descripEquipeContainer .equipeProduct {
+  color: #000;
+  font-size: 18px;
+}
+
+/*mobile*/
+@media (max-width: 768px) {
+  .wrapperProductPage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wrapperProductPage .host .titleProduct {
+    width: 100%;
+  }
+  .wrapperProductPage .host .locationProduct {
+    font-size: 26px;
+  }
+  .wrapperProductPage .host .hostProfil {
+    display: none;
+  }
+  .wrapperProductPage .tagsStarContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .wrapperProductPage .tagsStarContainer .tagsContainer {
+    width: 80%;
+    margin: 20px 0 0 0;
+    padding-bottom: 10px;
+  }
+  .wrapperProductPage .tagsStarContainer .tagsContainer .tagsProduct {
+    padding: 3px 10px;
+  }
+  .wrapperProductPage .tagsStarContainer .contentVersionMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .wrapperProductPage .tagsStarContainer .contentVersionMobile .starContainer .star, .wrapperProductPage .tagsStarContainer .contentVersionMobile .starContainer .starGray {
+    width: 10px;
+  }
+  .wrapperProductPage .tagsStarContainer .hostProfilMobile {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+  }
+  .wrapperProductPage .tagsStarContainer .hostProfilMobile .hostNameMobile {
+    width: 80px;
+    text-align: right;
+    color: #FF6060;
+    text-align: right;
+    font-size: 18px;
+    font-style: normal;
+  }
+  .wrapperProductPage .tagsStarContainer .hostProfilMobile .hostPictureMobile {
+    width: 70px;
+    margin: 0 0 15px 10px;
+    border-radius: 50%;
+  }
+  .wrapperProductPage .descripEquipeContainer {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapperProductPage .descripEquipeContainer .description, .wrapperProductPage .descripEquipeContainer .equipement {
+    width: 100%;
+  }
+}/*# sourceMappingURL=productPage.css.map */
