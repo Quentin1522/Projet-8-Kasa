@@ -16,11 +16,12 @@ function App() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<><Banner img={source} 
+            <Route path="/" element={<><Banner img={source} alt="source" 
+                                              bgOpacity="0.5" 
                                               title="Chez vous, partout et ailleurs"
                                               titleMobileOne="Chez vous,"
                                               titleMobileTwo="partout et ailleurs"
-                                              bgOpacity=""/>
+                                              />
                                               <Gallery data={data} /></>} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="*" element={<Error/>}/>

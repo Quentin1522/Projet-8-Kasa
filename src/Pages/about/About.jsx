@@ -27,7 +27,6 @@ const About = () => {
         })
     }
 
-
     return (
         <div className="wrapperAbout">
             <Banner img={kaien} alt="kaien"/>
