@@ -1,0 +1,12 @@
+.contentText{
+    margin-top: 10px;
+}
+
+.aboutArrow {
+    transition: transform 0.3s; // Définit une transition pour l'animation
+  }
+  
+  .rotate{
+    transform: rotate(180deg); // Fait pivoter la flèche de 180 degrés pour pointer vers le bas
+  }
+  

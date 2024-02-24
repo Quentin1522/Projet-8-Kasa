@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
-import { useState } from "react";
 import Carousel from '../../components/carrousel/Carousel.jsx';
 import '../productPage/productPage.scss';
 import Star from "../../assets/star.svg";
 import StarGray from "../../assets/starGray.svg";
 import Arrow from "../../assets/arrow.svg";
 import Error from "../error/Error.jsx";
+import Collapse from "../../components/collapse/Collapse.jsx";
 
 
 
@@ -20,8 +20,6 @@ const product = data.find(prod => prod.id === id);
 if (!product) {
     return <Error/>
 }
-
-
 
     const renderRatingStars = () => {
         const rating = parseInt(product.rating);
@@ -40,24 +38,6 @@ if (!product) {
             
         return stars;
     };
-
-        // Déclaration de l'état initial contenant les états des différentes sections
-        const[sectionStates, setSectionState] = useState({
-            description: false,
-            equipement: false,
-        });
-    
-        //fonction, pour basculer l'état de la section spécifiée
-        const toggleText = (section) => {
-            //MAJ de l'état en copiant l'état actuel et en inversant la valeur de la section spécifiée
-            setSectionState({
-                //copie de l'état actuel
-                ...sectionStates,
-    
-                //inversion de la valeur de la section spécifiée
-                [section] : !sectionStates[section] 
-            })
-        }
 
     return (
         <div className="wrapperProductPage">
@@ -88,16 +68,21 @@ if (!product) {
                 </div>
                 </div>
             </div>
+
             <div className="descripEquipeContainer">
-                <div className="description" onClick={() => toggleText('description')}>
-                    <h3 className="descripTitle">Description <img className={`aboutArrow ${sectionStates.description ? 'down' : ''}`}  src={Arrow}/></h3>
-                    {sectionStates.description &&<p className="descripProduct">{product.description}</p>}
+
+                <div className="description">
+                <Collapse title="Description" content={product.description} />
                 </div>
-                <div className="equipement" onClick={() => toggleText('equipement')}>
-                    <h3 className="equipeTitle">Équipement <img className={`aboutArrow ${sectionStates.equipement ? 'down' : ''}`} src={Arrow}/></h3>
-                    {product.equipments.map((tag, index) => (
-                    sectionStates.equipement && <p className="equipeProduct" key={index}>{tag}</p>
-                    ))}
+
+                <div className="equipement">
+                <Collapse
+                className="equipList"
+                title="Équipement"
+                content={product.equipments.map((equipment, index) => (
+                <p key={index}>{equipment}</p>
+        ))}
+    />
                 </div>
             </div>
         </div>

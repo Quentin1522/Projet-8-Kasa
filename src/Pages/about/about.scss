@@ -13,26 +13,20 @@
     margin: auto;
 }
 
-.aboutArrow.down{
-    transform: rotate(180deg);
-    transform: transform 0.3s ease;
-}
-
 .containerDiv {
     margin: auto;
     padding: 30px 0;
     width: 70%;
 }
 
-.aboutDiv {
+.collapseDiv {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
-.titleAbout {
+.titleCollapse {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +39,7 @@
     cursor: pointer;
 }
 
-.pAbout {
+.pCollapse {
     margin-bottom: 15px;
 }
 

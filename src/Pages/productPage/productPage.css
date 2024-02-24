@@ -78,23 +78,9 @@
   justify-content: space-between;
 }
 .wrapperProductPage .descripEquipeContainer .description, .wrapperProductPage .descripEquipeContainer .equipement {
+  text-align: left;
   width: 45%;
   margin-bottom: 5%;
-}
-.wrapperProductPage .descripEquipeContainer .descripTitle, .wrapperProductPage .descripEquipeContainer .equipeTitle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #FF6060;
-  display: flex;
-  padding: 10px 20px 10px 10px;
-  border-radius: 10px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-.wrapperProductPage .descripEquipeContainer .descripProduct, .wrapperProductPage .descripEquipeContainer .equipeProduct {
-  color: #000;
-  font-size: 18px;
 }
 
 /*mobile*/
