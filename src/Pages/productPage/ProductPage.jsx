@@ -1,15 +1,27 @@
 import { useParams } from 'react-router-dom';
-import data from '../../Data/data.json';
 import { useState } from "react";
 import Carousel from '../../components/carrousel/Carousel.jsx';
 import '../productPage/productPage.scss';
 import Star from "../../assets/star.svg";
 import StarGray from "../../assets/starGray.svg";
 import Arrow from "../../assets/arrow.svg";
+import Error from "../error/Error.jsx";
 
-function ProductPage() {
-    const { id } = useParams();
-    const product = data.find(prod => prod.id === id);
+
+
+function ProductPage({data}) {
+// Extrait la valeur de l'ID de l'URL actuelle en utilisant useParams
+const { id } = useParams();
+
+// Recherche un élément dans un tableau 'data' dont la propriété 'id' est égale à la valeur de 'id' extrait de l'URL
+const product = data.find(prod => prod.id === id);
+
+// Vérifie si le produit a été trouvé ou non, affiche une page d'erreur si le produit n'est pas trouvé
+if (!product) {
+    return <Error/>
+}
+
+
 
     const renderRatingStars = () => {
         const rating = parseInt(product.rating);

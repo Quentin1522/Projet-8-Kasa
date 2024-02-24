@@ -1,9 +1,8 @@
 import "../gallery/gallery.scss";
-import data from "../../Data/data.json";
 import {Link} from "react-router-dom";
 
 
-function Gallery() {
+function Gallery({data}) {
     // rendu du composant
     return (
         <div className="cardContainer">

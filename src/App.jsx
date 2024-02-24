@@ -23,7 +23,7 @@ function App() {
                                               titleMobileTwo="partout et ailleurs"
                                               />
                                               <Gallery data={data} /></>} />
-            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/product/:id" element={<ProductDetails data={data} />} />
             <Route path="*" element={<Error/>}/>
             <Route path="/about" element={<About />} />
           </Routes>
