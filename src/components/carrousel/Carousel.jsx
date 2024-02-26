@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import data from "../../Data/data.json";
 import "../../components/carrousel/carrousel.scss";
 import arrowLeft from "../../assets/arrowleft.png";
 import arrowRight from "../../assets/arrowright.png";
 
-function Carousel() {
+function Carousel(props) {
     //récupère l'ID depuis le paramètres de l'URL
     const { id } = useParams();
     //recherche du produit correspondant ) l'ID dans le tableau "data"
-    const product = data.find(prod => prod.id === id);
+    const product = props.data.find(prod => prod.id === id);
 
     const totalImages = product.pictures.length;
 

@@ -3,7 +3,6 @@ import Carousel from '../../components/carrousel/Carousel.jsx';
 import '../productPage/productPage.scss';
 import Star from "../../assets/star.svg";
 import StarGray from "../../assets/starGray.svg";
-import Arrow from "../../assets/arrow.svg";
 import Error from "../error/Error.jsx";
 import Collapse from "../../components/collapse/Collapse.jsx";
 
@@ -41,7 +40,7 @@ if (!product) {
 
     return (
         <div className="wrapperProductPage">
-            <Carousel/>
+            <Carousel data={data}/>
             <div className="host">
                 <div className="hostInfo">
                 <p className="titleProduct">{product.title}</p>
