@@ -28,11 +28,18 @@ function Carousel(props) {
     return (
         <div className="carouselWrapper">
             <div className="imageContainer">
+                {/*vérifie si le nombre total d'image est supérieur à 1*/}
+                {totalImages > 1 &&(
+                    <>
                 <img className="arrow left" src={arrowLeft} alt="Previous" onClick={goToPreviousSlide} />
                 <img className="imgCarousel" src={product.pictures[currentImageIndex]} alt={product.title} />
                 <img className="arrow right" src={arrowRight} alt="Next" onClick={goToNextSlide} />
                 <span className="numberImg">{currentImageIndex +1} / {totalImages}</span>
-            </div>
+                </>
+            )}
+                            {/*vérifie si le nombre total d'image est égal à 1*/}
+            {totalImages === 1 && (<img className="imgCarousel" src={product.pictures[currentImageIndex]} alt={product.title} />)}
+                </div>
         </div>
     );
 }

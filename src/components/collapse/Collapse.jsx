@@ -17,7 +17,7 @@ const Collapse = ({ title, content }) => {
       <h3 className="titleCollapse" onClick={handleToggle}>{title} <img className={`aboutArrow ${isOpen ? 'rotate' : ''}`} src={Arrow} alt="arrow"/></h3>
       
       {/*affiche le contenu qi isOpen est vrai*/}
-      {isOpen && <p className="contentText">{content}</p>}
+      {isOpen && <ul className="contentText">{content}</ul>}
     </div>
   );
 };

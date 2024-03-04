@@ -9,6 +9,9 @@
 }
 
 .carouselWrapper{
+    .imgContainer{
+        height: 50px;
+    }
 
     .imgCarousel{
         object-fit: cover;
@@ -38,5 +41,13 @@
         position: absolute;
         top: 50%;
         left: 50%;
+    }
+}
+
+/*mobile*/
+@media (max-width: 768px){
+    .arrow{
+        width: 5%;
+        top: 30%;
     }
 }

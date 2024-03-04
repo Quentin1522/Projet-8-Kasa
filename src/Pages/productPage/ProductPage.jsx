@@ -25,11 +25,15 @@ if (!product) {
         const stars = [];
     
         // Créer les étoiles en ajoutant uniquement la classe "star"
+        //créer une boucle for qui va itérer de 0 à 4
         for (let i = 0; i < 5; i++) {
+            //vérifie si la valeur de i est inférieur à la variable rating
                 if(i < rating){
+                    //si oui ajoute une image d'étoile pleine au tableau stars
                     stars.push(<img src={Star} className="star" key={i} />);
                 }
                 else{
+                    //si non ajoute une étoile grise
                     stars.push(<img src={StarGray} className="starGray" key={i} />);
                 }
             }
@@ -79,7 +83,7 @@ if (!product) {
                 className="equipList"
                 title="Équipement"
                 content={product.equipments.map((equipment, index) => (
-                <p key={index}>{equipment}</p>
+                <li key={index}>{equipment}</li>
         ))}
     />
                 </div>
